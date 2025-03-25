@@ -1,0 +1,61 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f0f5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope, .teddy, .note {
+    position: absolute;
+    opacity: 0;
+}
+
+.envelope img, .teddy img, .note .message p {
+    width: 100%;
+    max-width: 300px;
+}
+
+.note .message {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Animation and 3D Effects */
+.teddy {
+    transform: scale(0);
+    transform-origin: center center;
+}
+
+.note {
+    transform: scale(0);
+    transform-origin: center center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .note .message {
+        font-size: 18px;
+    }
+}
